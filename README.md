@@ -1,4 +1,5 @@
-### slack_metro
+slack_metro
+===========
 
 Simple MIDI metronome using a PIC12F1822
 
