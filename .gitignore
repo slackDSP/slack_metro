@@ -1,3 +1,4 @@
+/.gitignore~
 /slack_metro.X/Makefile
 /slack_metro.X/build/default/production/slack_metro_main.p1
 /slack_metro.X/build/default/production/slack_metro_main.p1.d
