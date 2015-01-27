@@ -77,7 +77,7 @@ void main() {
         __delay_ms(100);
         leds = 0;
         beat++;
-        if (beat == (3 + switch34))
+        if (beat > (2 + switch34))
             beat = 0;
         tock = 0;
     }
