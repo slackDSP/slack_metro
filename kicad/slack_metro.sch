@@ -1,0 +1,225 @@
+EESchema Schematic File Version 2  date Sun 25 Jan 2015 10:48:30 GMT
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:slack_metro
+LIBS:slack_metro-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "25 jan 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MIDI P1
+U 1 1 54B97D73
+P 6000 1350
+F 0 "P1" H 6000 1350 70  0000 C CNN
+F 1 "MIDI" H 6000 1200 70  0000 C CNN
+F 2 "" H 6000 1350 60  0000 C CNN
+F 3 "" H 6000 1350 60  0000 C CNN
+	1    6000 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L PIC12F1822 U1
+U 1 1 54C3C682
+P 7750 3050
+F 0 "U1" H 7750 3750 60  0000 C CNN
+F 1 "PIC12F1822" H 7750 2400 60  0000 C CNN
+F 2 "" H 7750 3050 60  0000 C CNN
+F 3 "" H 7750 3050 60  0000 C CNN
+	1    7750 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR2
+U 1 1 54C3C6B2
+P 6000 1950
+F 0 "#PWR2" H 6000 1950 30  0001 C CNN
+F 1 "GND" H 6000 1880 30  0001 C CNN
+F 2 "" H 6000 1950 60  0000 C CNN
+F 3 "" H 6000 1950 60  0000 C CNN
+	1    6000 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR3
+U 1 1 54C3C6C1
+P 8600 2650
+F 0 "#PWR3" H 8600 2650 30  0001 C CNN
+F 1 "GND" H 8600 2580 30  0001 C CNN
+F 2 "" H 8600 2650 60  0000 C CNN
+F 3 "" H 8600 2650 60  0000 C CNN
+	1    8600 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 2550 8600 2550
+Wire Wire Line
+	8600 2550 8600 2650
+$Comp
+L R R2
+U 1 1 54C3C6F5
+P 6450 2600
+F 0 "R2" V 6530 2600 40  0000 C CNN
+F 1 "4k7" V 6457 2601 40  0000 C CNN
+F 2 "~" V 6380 2600 30  0000 C CNN
+F 3 "~" H 6450 2600 30  0000 C CNN
+	1    6450 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D2
+U 1 1 54C3C81B
+P 8900 3000
+F 0 "D2" H 8900 3100 50  0000 C CNN
+F 1 "Red LED" H 8900 2900 50  0000 C CNN
+F 2 "~" H 8900 3000 60  0000 C CNN
+F 3 "~" H 8900 3000 60  0000 C CNN
+	1    8900 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 54C3C82A
+P 8900 2750
+F 0 "D1" H 8900 2850 50  0000 C CNN
+F 1 "Green LED" H 8900 2650 50  0000 C CNN
+F 2 "~" H 8900 2750 60  0000 C CNN
+F 3 "~" H 8900 2750 60  0000 C CNN
+	1    8900 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R3
+U 1 1 54C3C839
+P 9400 2850
+F 0 "R3" V 9480 2850 40  0000 C CNN
+F 1 "750R" V 9407 2851 40  0000 C CNN
+F 2 "~" V 9330 2850 30  0000 C CNN
+F 3 "~" H 9400 2850 30  0000 C CNN
+	1    9400 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8450 2850 8700 2850
+Wire Wire Line
+	8700 2750 8700 3000
+Connection ~ 8700 2850
+Wire Wire Line
+	9100 2750 9100 3000
+Connection ~ 9100 2850
+Wire Wire Line
+	9650 2850 9650 3250
+Wire Wire Line
+	9650 3250 8450 3250
+$Comp
+L R R1
+U 1 1 54C3C8A5
+P 5950 2600
+F 0 "R1" V 6030 2600 40  0000 C CNN
+F 1 "4k7" V 5957 2601 40  0000 C CNN
+F 2 "~" V 5880 2600 30  0000 C CNN
+F 3 "~" H 5950 2600 30  0000 C CNN
+	1    5950 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3250 7000 3250
+Wire Wire Line
+	5950 2850 5950 3250
+$Comp
+L CP1 22uF
+U 1 1 54C3C8EF
+P 8450 2350
+F 0 "22uF" H 8500 2450 50  0000 L CNN
+F 1 "CP1" H 8500 2250 50  0000 L CNN
+F 2 "~" H 8450 2350 60  0000 C CNN
+F 3 "~" H 8450 2350 60  0000 C CNN
+	1    8450 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2150 8450 2150
+Wire Wire Line
+	7000 2150 7000 2550
+$Comp
+L SPST SW1
+U 1 1 54C3C91D
+P 5950 3750
+F 0 "SW1" H 5950 3850 70  0000 C CNN
+F 1 "SPST" H 5950 3650 70  0000 C CNN
+F 2 "~" H 5950 3750 60  0000 C CNN
+F 3 "~" H 5950 3750 60  0000 C CNN
+	1    5950 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 54C3C945
+P 5950 4250
+F 0 "#PWR1" H 5950 4250 30  0001 C CNN
+F 1 "GND" H 5950 4180 30  0001 C CNN
+F 2 "" H 5950 4250 60  0000 C CNN
+F 3 "" H 5950 4250 60  0000 C CNN
+	1    5950 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2850 9150 2850
+Connection ~ 5400 2150
+Connection ~ 7000 2150
+Wire Wire Line
+	6450 2150 6450 2350
+Connection ~ 6450 2150
+Wire Wire Line
+	5950 2150 5950 2350
+Connection ~ 5950 2150
+Wire Wire Line
+	5400 1550 5400 2150
+Wire Wire Line
+	7000 2850 6450 2850
+Wire Wire Line
+	6750 2850 6750 1550
+Wire Wire Line
+	6750 1550 6600 1550
+Connection ~ 6750 2850
+Text Notes 6150 3800 0    60   ~ 0
+3/4 Time
+$EndSCHEMATC
