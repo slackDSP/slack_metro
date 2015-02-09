@@ -93,7 +93,7 @@ void interrupt isr(void) {
 
     if (midi_in == tick) {
         tick_counter++;
-        if (tick_counter == 23) {
+        if (tick_counter > 23) {
             tock = 1;
             tick_counter = 0;
 
@@ -103,12 +103,12 @@ void interrupt isr(void) {
     if (midi_in == start) {
         run = 1;
         beat = 0;
-        tick_counter = 22;
+        tick_counter = 23;
     }
 
     if (midi_in == cont) {
         run = 1;
-        tick_counter = 22;
+        tick_counter = 23;
     }
 
     if (midi_in == stop) {
