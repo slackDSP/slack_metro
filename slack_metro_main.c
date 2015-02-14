@@ -35,11 +35,13 @@
 #define leds LATA
 #define red 1
 #define green 2
+#define both 3
 #define tick 248
 #define start 250
 #define stop 252
 #define cont 251
 #define switch34 RA4
+#define pulse_switch RA3
 
 volatile char tock = 0;
 volatile char beat = 0;
@@ -62,6 +64,7 @@ void main() {
     ANSELA = 0; //All pins digital
     TRISA0 = 0;
     TRISA1 = 0;
+    TRISA2 = 0;
     TRISA4 = 1;
     leds = 0;
 
@@ -70,12 +73,15 @@ void main() {
         while (!(run && tock));
 
         if (beat == 0)
-            leds = red;
+            leds = both | 4;
         else
-            leds = green;
+            leds = green | (~pulse_switch << 2);
 
-        __delay_ms(100);
+        __delay_ms(10);
+        leds = leds & 3;
+        __delay_ms(90);
         leds = 0;
+
         beat++;
         if (beat > (2 + switch34))
             beat = 0;
